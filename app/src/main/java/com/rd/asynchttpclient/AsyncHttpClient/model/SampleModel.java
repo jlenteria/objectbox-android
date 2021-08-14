@@ -1,5 +1,7 @@
 package com.rd.asynchttpclient.AsyncHttpClient.model;
 
+import java.io.Serializable;
+
 import io.objectbox.annotation.Entity;
 import io.objectbox.annotation.Id;
 

@@ -5,7 +5,7 @@
   "entities": [
     {
       "id": "1:6357532352701291362",
-      "lastPropertyId": "1:113738707825927807",
+      "lastPropertyId": "6:3759089671860805205",
       "name": "SampleModel",
       "properties": [
         {
@@ -13,6 +13,31 @@
           "name": "id",
           "type": 6,
           "flags": 1
+        },
+        {
+          "id": "2:7740237563449741042",
+          "name": "username",
+          "type": 9
+        },
+        {
+          "id": "3:5897276999521419684",
+          "name": "firstName",
+          "type": 9
+        },
+        {
+          "id": "4:5297927611350062198",
+          "name": "lastName",
+          "type": 9
+        },
+        {
+          "id": "5:7266953117436657068",
+          "name": "status",
+          "type": 9
+        },
+        {
+          "id": "6:3759089671860805205",
+          "name": "password",
+          "type": 9
         }
       ],
       "relations": []

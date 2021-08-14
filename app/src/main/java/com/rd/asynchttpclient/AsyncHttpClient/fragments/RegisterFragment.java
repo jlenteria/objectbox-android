@@ -84,6 +84,8 @@ public class RegisterFragment extends Fragment {
             if(TextUtils.isEmpty(username.getText().toString().trim()) || TextUtils.isEmpty(firstName.getText().toString().trim()) || TextUtils.isEmpty(lastName.getText().toString().trim()) || TextUtils.isEmpty(password.getText().toString().trim())){
                 builder.setTitle("ERROR");
                 builder.setMessage("Please fill up all fields!");
+                builder.setPositiveButton("Ok", null);
+
             }else{
                 list = getParent().getSampleInfo().query().equal(SampleModel_.username, username.getText().toString().toLowerCase()).build().find();
                 if(list.size() > 0){

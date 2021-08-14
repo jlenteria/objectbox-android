@@ -34,6 +34,7 @@
                 android:textSize="18sp"
                 android:textColor="@color/black"/>
             <EditText
+                android:enabled="false"
                 android:id="@+id/username"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -51,6 +52,8 @@
                 android:textSize="18sp"
                 android:textColor="@color/black"/>
             <EditText
+                android:enabled="false"
+
                 android:id="@+id/firstName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -68,6 +71,8 @@
                 android:textSize="18sp"
                 android:textColor="@color/black"/>
             <EditText
+                android:enabled="false"
+
                 android:id="@+id/lastName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -85,6 +90,7 @@
                 android:textSize="18sp"
                 android:textColor="@color/black"/>
             <EditText
+                android:enabled="false"
                 android:id="@+id/status"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -102,6 +108,7 @@
                 android:textSize="18sp"
                 android:textColor="@color/black"/>
             <EditText
+                android:enabled="false"
                 android:id="@+id/password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

@@ -1,11 +1,8 @@
 package com.rd.asynchttpclient.AsyncHttpClient.fragments;
 
 import android.app.AlertDialog;
-import android.content.DialogInterface;
-import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,15 +14,10 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 
-import com.google.gson.Gson;
-import com.rd.asynchttpclient.AsyncHttpClient.BaseActivity;
 import com.rd.asynchttpclient.AsyncHttpClient.model.SampleModel;
 import com.rd.asynchttpclient.AsyncHttpClient.model.SampleModel_;
 import com.rd.asynchttpclient.MainActivity;
-import com.rd.asynchttpclient.MainActivity2;
 import com.rd.asynchttpclient.R;
 
 import java.util.ArrayList;
@@ -47,7 +39,6 @@ public class LoginFragment extends Fragment {
     TextView signUp;
 
     List <SampleModel> sampleModelList = new ArrayList();
-    private Boolean hasData = false;
     SampleModel sampleModel = null;
 
     public static LoginFragment newInstance(){
@@ -97,10 +88,8 @@ public class LoginFragment extends Fragment {
                 builder.setMessage("Data Found!");
                 builder.setCancelable(false);
                 builder.setPositiveButton("OK", (dialog, which) -> {
-                    String data = new Gson().toJson(sampleModel);
-                    Intent intent = new Intent(getContext(), MainActivity2.class);
-                    intent.putExtra("DATA", data);
-                    startActivity(intent);
+                   Profile profileFragment = Profile.newInstance(sampleModel);
+                   getFragmentManager().beginTransaction().replace(R.id.content_view, profileFragment).commit();
                 });
             }
             else{
